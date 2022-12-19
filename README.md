@@ -36,11 +36,22 @@ $ cloudshell env build-local # builds the image
 $ cloudshell env run # starts the custom environment
 $ exit
 ```
-3. Push the image to GCR.
+
+3. Commit your code changes locally:
+```bash
+git commit -a -m "Initial custom environment check-in."
+```
+
+4. Push your code changes to Cloud Source Repositories:
+```bash
+git push origin master
+```
+
+5. Push custom image to Container Registry:
 ```bash
 $ cloudshell env push
 ```
 
-4. **Don't forget to update the Dockerfile in the GitHub repository to reflect changes.**
+6. **Don't forget to update the Dockerfile in the GitHub repository to reflect changes.**
 
 More information can be found on the steps above by running `teachme /google/devshell/tutorials/custom-image-tutorial.md` in GCP Cloud Shell.
