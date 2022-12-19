@@ -1,7 +1,6 @@
 # Custom Cloud Shell Image for Tech Equity Sandbox Project
 
 ## Updating the Custom Cloud Shell Image
-The Tech Equity Sandbox Project website currently points at the image stored in Google Container Registry (GCR). If a project developer wants to change the Custom Image, it is **not enough** to update the Dockerfile stored in this directory. The developer must additionally update the image stored in GCR.
 
 Steps to update the image locally and from GCP are described below.
 
