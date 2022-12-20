@@ -84,8 +84,7 @@ function cloudshell_open {
     done <<< "$output"
   fi
   # add scripts to path
-  export PATH="~/cloudshell_open/tech-equity-sandbox/:$PATH"
-  export PATH="~/cloudshell_open/tech-equity-sandbox/bin:$PATH"
+  export PATH=$PATH:$(find $HOME/cloudshell_open/tech-equity-sandbox -maxdepth 1 -type d | paste -sd ":" -)
   # ensure version environment variable is set
   source /etc/environment
   sandboxctl create # This line automatically runs the install script when cloudshell button is pressed
