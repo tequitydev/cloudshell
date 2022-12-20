@@ -19,6 +19,9 @@ FROM gcr.io/cloudshell-images/cloudshell:latest
 RUN sudo apt-get update
 RUN sudo apt-get -y --only-upgrade install google-cloud-sdk-anthos-auth google-cloud-sdk
 
+# Install pipe viewer
+RUN sudo apt-get -qq install pv
+
 # install Terraform 1.0.0
 RUN sudo apt-get install unzip && \
   wget -q https://releases.hashicorp.com/terraform/1.0.0/terraform_1.0.0_linux_amd64.zip -O ./terraform.zip && \
